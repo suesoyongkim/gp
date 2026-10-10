@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국민가요 플레이어</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+</head>
+<body>
+<div id="youtubePlayer">
+</div>
+<div id="logo">
+    <img src="logo.png" alt="국민가요 플레이어" id="logoImage">
+</div>
+    
+
+<div id="title">
+    <div id="zoomButtons">
+        <button id="restartView">🌐</button>
+        <button id="zoomIn" onclick="zoomCamera(-1)">+</button>
+        <button id="zoomOut" onclick="zoomCamera(1)">-</button>
+    </div>
+    <div id="aboutButton" onclick="aboutToggle()">
+        About...
+    </div>
+    <div id="aboutSub" style="display: none;">
+        <p><strong>국민가요</strong>는 각국을 대표하는 상징적인 노래로 대중의 정서와 문화를 담아 시대를 초월해 사랑받는 곡들을 의미합니다.
+            <br>지구본과 함께 국민가요 45곡을 탐험하세요!
+        <br>
+        <br>
+        © 2024. @soyongkeem.<br> All rights reserved.
+        </p>
+    </div>
+
+    <button id="spotifyButton">Listen on Spotify</button>
+</div>
+<div id="resetModal" class="footer-modal">Reset</div>
+<div id="description">
+    
+    <div id="descriptionTitle"></div>
+    <div id="descriptionBody"></div>
+</div>
+
+<div id="spotifyModal" class="modal">
+    <div class="modal-content">
+        <p>Spotify로 이동합니다.</p>
+        <button id="confirmSpotify">이동</button>
+        <button id="cancelSpotify">취소</button>
+    </div>
+</div>
+
+
+<div id="regionName"></div>
+
+<div class="cursor"></div>
+<div class="cursor-outline"></div>
+<script src="descriptions.js"></script>
+<script src="scripts.js"></script>
+
+</body>
+</html>
